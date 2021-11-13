@@ -42,23 +42,23 @@ body {
 
 div.dot, div.label {
 	position: absolute;
-	height: 5.6vmin;
-	width: 5.6vmin;
-	left: -100vw;
-	bottom: -100vh;
-	display: block;
-	background: #f00;
-	transform: translate(-50%, 50%);
-	transform-origin: 0% 100%;
-	border-radius: 100% .2vmin 100% 100%;
-	box-shadow: 0 0 1.6vmin .8vmin rgba(0, 0, 0, .2);
-	opacity: 1;
-	z-index: 15;
-
-	will-change: bottom, left, transform;
-	outline: .1vmin solid transparent;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: initial;
+    height: 10.6vmin;
+    width: 10.6vmin;
+    left: -100vw;
+    bottom: -100vh;
+    display: block;
+    background: #fff;
+    transform: translate(-50%, 50%);
+    transform-origin: 0% 100%;
+    border-radius: 100% .2vmin 100% 100%;
+    box-shadow: 0 0 1.6vmin 0.8vmin rgba(0, 0, 0, .2);
+    opacity: 1;
+    z-index: 15;
+    will-change: bottom, left, transform;
+    outline: .1vmin solid transparent;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: initial;
+    transition: all linear;
 }
 
 div.dot::before, div.dot::after {
@@ -85,15 +85,15 @@ div.dot::after {
 	bottom: 2vmin;
 }
 
-div.dot.CT {
+div.label.CT {
 	background: #5ab8f4;
 }
 
-div.dot.T {
+div.label.T {
 	background: #f0c941;
 }
 
-div.dot.bomb {
+div.lavel.bomb {
 	border-radius: 2vmin .4vmin 2vmin 2.4vmin;
 	background: #FF8200;
 }
@@ -116,7 +116,8 @@ div.dot.flashed {
 }
 
 div.dot.flashed.active {
-	box-shadow: 0 0 0 .2vmin rgba(0, 0, 0, .9), 0 0 0 1vmin rgba(255, 255, 255, .9), 0 0 2.4vmin 1.2vmin rgba(255, 255, 255, .2), inset 0 0 2vmin 1vmin rgba(255, 255, 255, .8);
+	z-index: 15;
+	/* box-shadow: 0 0 0 .2vmin rgba(0, 0, 0, .9), 0 0 0 1vmin rgba(255, 255, 255, .9), 0 0 2.4vmin 1.2vmin rgba(255, 255, 255, .2), inset 0 0 2vmin 1vmin rgba(255, 255, 255, .8); */
 }
 
 div.dot.dead {
@@ -146,19 +147,26 @@ div.dot.dead > div {
 }
 
 div.label {
-	background: none;
-	text-align: center;
-	color: black;
-	font-weight: bold;
-	text-shadow: 0 0 1.2vmin rgba(255, 255, 255, .2);
-	box-shadow: none;
-	line-height: 5.6vmin;
-	font-size: 4.8vmin;
+	background: red;
+    background-size: 65px;
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 1.2vmin rgb(255 255 255 / 20%);
+    box-shadow: none;
+    line-height: 8.6vmin;
+    font-size: 6.8vmin;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    box-sizing: border-box;
 }
 
-div.label.active {
-	z-index: 16;
+div.dot.active {
+	z-index: 15;
 	font-size: 5vmin;
+	box-shadow: 0px 0px 25px #fff;
 }
 
 div.label.dead {

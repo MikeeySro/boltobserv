@@ -12,10 +12,10 @@
 		"disable": false,
 
 		// Always show the window as the top application
-		"alwaysOnTop": false,
+		"alwaysOnTop": true,
 
 		// Make the background of the window transparent
-		"transparent": false,
+		"transparent": true,
 
 		// Change the background color of the window even with transparency
 		// The color should be in hexadecimal color code
@@ -36,13 +36,13 @@
 		// The default shape and position of the window
 		"defaultSize": {
 			// The height and width in pixels
-			"height": 600,
-			"width": 600,
+			"height": 320,
+			"width": 320,
 
 			// The default distance from the top left of the screen
 			// Set to -1 to let the OS pick the best place
-			"top": -1,
-			"left": -1
+			"top": 30,
+			"left": 30
 		}
 	},
 
@@ -62,19 +62,19 @@
 	// Settings that will change the way the radar will be displayed
 	"radar": {
 		// Hide advisories on the radar
-		"hideAdvisories": false,
+		"hideAdvisories": true,
 		// Show the buyzones on the map, or only when players can buy
 		// Can either be "never", "buytime" or "always"
-		"showBuyzones": "buytime",
+		"showBuyzones": "never",
 		// Show Boltobserv and Simple Radar logos
-		"showLogos": true,
+		"showLogos": false,
 
 		// Show muzzle flashes for players shooting
-		"shooting": true,
+		"shooting": false,
 		// Show red indicators on player dots when their health gets lower
-		"damage": true,
+		"damage": false,
 		// Show flashed players in a lighter color
-		"flashes": true,
+		"flashes": false,
 
 		// Frames to smooth out player movement
 		"playerSmoothing": 13,
@@ -89,7 +89,7 @@
 	// Show a vertical indicator on every player dot, indicating how high the player is on the map
 	"vertIndicator": {
 		// Indicator type, can either be "none", "color" or "scale"
-		"type": "scale",
+		"type": "none",
 
 		// RGB values for the color indicator, from lowest to highest
 		"colorRange": [[13, 255, 0], [255, 255, 255], [255, 0, 199]],
@@ -101,7 +101,7 @@
 	// Settings for automatically zooming in on alive players on the map
 	"autozoom": {
 		// Enable or disable autozoom
-		"enable": true,
+		"enable": false,
 
 		// Frames to smooth out zoom movement
 		"smoothing": 32,
@@ -118,7 +118,7 @@
 	"game": {
 		// Seconds of inactivity before considering a connection to the game client as lost
 		// Set to -1 to never timeout
-		"connectionTimout": 30,
+		"connectionTimout": -1,
 
 		// The port GSI will try to connect to
 		"networkPort": 36363,
